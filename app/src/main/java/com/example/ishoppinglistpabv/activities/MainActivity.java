@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnAddPending = findViewById(R.id.btnAddPending);
         Button btnAddSystem = findViewById(R.id.btnAddSystem);
 
-        // inicializamos la lista
+        // inicializamos la lista.
         DataBase.inicializeList();
         ProductAdapter productAdapter = new ProductAdapter(MainActivity.this, 0, DataBase.getProductListPending());
 
