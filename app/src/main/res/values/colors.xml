@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">#4D0E71</color> <!-- Morado oscuro -->
+    <color name="secondary_color">#60168C</color> <!-- Morado medio -->
+    <color name="accent_color">#7F33B8</color> <!-- Morado claro -->
+    <color name="text_color">#FFFFFF</color> <!-- Blanco para texto -->
+    <color name="divider_color">#CCCCCC</color> <!-- Gris claro para divisores -->
+    <color name="background_color">#FFFFFF</color> <!-- Blanco para fondo -->
+    <color name="black">#000000</color> <!-- Negro -->
+</resources>
