@@ -14,7 +14,6 @@ import com.example.ishoppinglistpabv.R;
 import com.example.ishoppinglistpabv.adapters.ProductAdapter;
 import com.example.ishoppinglistpabv.dataBase.DataBase;
 import com.example.ishoppinglistpabv.models.Product;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 

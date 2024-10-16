@@ -1,10 +1,8 @@
 package com.example.ishoppinglistpabv.dataBase;
 
 import android.widget.Toast;
-
 import com.example.ishoppinglistpabv.activities.AddNewProductActivity;
 import com.example.ishoppinglistpabv.models.Product;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +29,7 @@ public class DataBase {
             productList.add(new Product(14, "Silla de Oficina Ergonómica", "Diseño ergonómico y ajustes personalizados", true, false, false));
             productList.add(new Product(15, "Equipo de Gimnasio en Casa", "Peso ajustable y múltiples ejercicios", true, false, false));
             productList.add(new Product(16, "Proyector Portátil", "Resolución HD y conectividad HDMI", true, false, false));
-            productList.add(new Product(17, "Altavoz Portátil con Micrófono", "Conectividad Bluetooth y batería recargable", true, false, false));
+            productList.add(new Product(17, "Altavoz Portátil con Micrófono", "Conectividad Bluetooth y batería recargable", false, false, false));
             productList.add(new Product(18, "Kit de Herramientas Básicas", "Incluye llaves, alicates y destornilladores", false, false, false));
             productList.add(new Product(19, "Cama Inflable para Camping", "Diseño compacto y fácil de inflar", false, false, false));
             productList.add(new Product(20, "Mochila de Viaje con Ruedas", "Capacidad grande y manijas ajustables", true, false, false));
@@ -72,7 +70,7 @@ public class DataBase {
 
     /**
      * Método para obtener el último id de la lista
-     * @return
+     * @return - id
      */
     public static int getLastIdByProductList() {
         int id = 1;
@@ -108,7 +106,7 @@ public class DataBase {
      * Función para añadir un producto a la lista
      *
      * @param product - Producto que vamos a añadir
-     * @param view    - Vista actual
+     * @param view - Vista actual
      */
     public static void addProduct(Product product, AddNewProductActivity view) {
         for (Product p : productList) {
