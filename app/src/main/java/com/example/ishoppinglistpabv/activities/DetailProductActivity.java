@@ -29,7 +29,9 @@ public class DetailProductActivity extends AppCompatActivity {
 
         TextView tvName = findViewById(R.id.tvDetailName);
         TextView tvDescription = findViewById(R.id.tvDetailDescription);
-        Switch sw = findViewById(R.id.sw);
+        Switch swPending = findViewById(R.id.swPending);
+        Switch swLactose = findViewById(R.id.swLactose);
+        Switch swGluten = findViewById(R.id.swGluten);
         Button btnEdit = findViewById(R.id.btnEdit);
         Button btnBack = findViewById(R.id.btnBack);
 
@@ -42,7 +44,9 @@ public class DetailProductActivity extends AppCompatActivity {
         // Asignamos los valores a los campos
         tvName.setText(product.getName());
         tvDescription.setText(product.getDescription());
-        sw.setChecked(product.isState());
+        swPending.setChecked(product.isState());
+        swLactose.setChecked(product.isLactose());
+        swGluten.setChecked(product.isGluten());
 
         // Botón que te envia al main
         btnBack.setOnClickListener(new View.OnClickListener() {

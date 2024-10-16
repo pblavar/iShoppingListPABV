@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        ArrayList<Product> productsPending = new ArrayList<>();
+        //ArrayList<Product> productsPending = new ArrayList<>();
         ListView lvProduct = findViewById(R.id.lvElements);
         Button btnAddPending = findViewById(R.id.btnAddPending);
         Button btnAddSystem = findViewById(R.id.btnAddSystem);

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Switch;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,6 +37,18 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         TextView tvName = convertView.findViewById(R.id.tvName);
         TextView tvId = convertView.findViewById(R.id.tvId);
         TextView tvDescription = convertView.findViewById(R.id.tvDescription);
+
+        Switch swLactose = convertView.findViewById(R.id.swLactose);
+        Switch swGluten = convertView.findViewById(R.id.swGluten);
+
+        // Cambiamos el background dependiendo si el producto tiene lactosa o no
+        if (p.hasLactoseOrGluten() == 1) {
+            convertView.setBackgroundColor(getContext().getResources().getColor(R.color.colorWithLactose)); // color para productos con lactosa
+        } else if (p.hasLactoseOrGluten() == 2){
+            convertView.setBackgroundColor(getContext().getResources().getColor(R.color.colorWithGluten)); // color para productos con gluten
+        } else if (p.hasLactoseOrGluten() == 3) {
+            convertView.setBackgroundColor(getContext().getResources().getColor(R.color.colorWithLactosaGluten)); // color para productos con lactosa y gluten
+        }
 
         // Modificamoslos atributos de los componentes
         tvName.setText(p.getName());

@@ -33,7 +33,9 @@ public class EditProductActivity extends AppCompatActivity {
         TextView tvId = findViewById(R.id.tvEditId);
         EditText etName = findViewById(R.id.etEditName);
         EditText etDescription = findViewById(R.id.etEditDescription);
-        Switch sw = findViewById(R.id.sw);
+        Switch swPending = findViewById(R.id.swPending);
+        Switch swLactose = findViewById(R.id.swLactose);
+        Switch swGluten = findViewById(R.id.swGluten);
         Button btnBack = findViewById(R.id.btnEditBack);
         Button btnSave = findViewById(R.id.btnEditSave);
 
@@ -46,7 +48,9 @@ public class EditProductActivity extends AppCompatActivity {
         tvId.setText(String.valueOf(currentProduct.getId()));
         etName.setText(currentProduct.getName());
         etDescription.setText(currentProduct.getDescription());
-        sw.setChecked(currentProduct.isState());
+        swPending.setChecked(currentProduct.isState());
+        swLactose.setChecked(currentProduct.isLactose());
+        swGluten.setChecked(currentProduct.isGluten());
 
         // Botón que te envia al main
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +73,9 @@ public class EditProductActivity extends AppCompatActivity {
                 }
                 currentProduct.setName(etName.getText().toString());
                 currentProduct.setDescription(etDescription.getText().toString());
-                currentProduct.setState(sw.isChecked());
+                currentProduct.setState(swPending.isChecked());
+                currentProduct.setLactose(swLactose.isChecked());
+                currentProduct.setGluten(swGluten.isChecked());
                 Toast toast = new Toast(EditProductActivity.this);
                 toast.setText("Product successfully edited");
                 toast.show();

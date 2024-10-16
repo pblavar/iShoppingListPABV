@@ -32,7 +32,9 @@ public class AddNewProductActivity extends AppCompatActivity {
         TextView tvID = findViewById(R.id.tvAddId);
         TextView tvName = findViewById(R.id.etAddName);
         TextView tvDescription = findViewById(R.id.etAddDescription);
-        Switch sw = findViewById(R.id.sw);
+        Switch swPending = findViewById(R.id.swPending);
+        Switch swLactose = findViewById(R.id.swLactose);
+        Switch swGluten = findViewById(R.id.swGluten);
         Button btnSave = findViewById(R.id.btnAddSave);
         Button btnBack = findViewById(R.id.btnAddBack);
 
@@ -57,7 +59,9 @@ public class AddNewProductActivity extends AppCompatActivity {
                 product.setId(Integer.valueOf(tvID.getText().toString()));
                 product.setName(tvName.getText().toString());
                 product.setDescription(tvDescription.getText().toString());
-                product.setState(sw.isChecked());
+                product.setState(swPending.isChecked());
+                product.setLactose(swLactose.isChecked());
+                product.setGluten(swGluten.isChecked());
 
                 if (product.getName().isEmpty()){
                     Toast toas = new Toast(AddNewProductActivity.this);
@@ -70,7 +74,9 @@ public class AddNewProductActivity extends AppCompatActivity {
                 tvID.setText(String.valueOf(DataBase.getLastIdByProductList()));
                 tvName.setText("");
                 tvDescription.setText("");
-                sw.setChecked(false);
+                swPending.setChecked(false);
+                swLactose.setChecked(false);
+                swGluten.setChecked(false);
 
                 // Devolvemos al usuario al main
                 Intent intent = new Intent(AddNewProductActivity.this, MainActivity.class);

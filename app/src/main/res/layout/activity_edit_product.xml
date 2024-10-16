@@ -128,12 +128,34 @@
             </LinearLayout>
 
             <Switch
-                android:id="@+id/sw"
+                android:id="@+id/swPending"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:text="¿Está pendiente?"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Switch
+                android:id="@+id/swLactose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="¿Tiene lactosa?"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Switch
+                android:id="@+id/swGluten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="¿Tiene gluten?"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />

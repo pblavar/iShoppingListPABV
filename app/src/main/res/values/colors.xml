@@ -7,4 +7,7 @@
     <color name="divider_color">#CCCCCC</color> <!-- Gris claro para divisores -->
     <color name="background_color">#FFFFFF</color> <!-- Blanco para fondo -->
     <color name="black">#000000</color> <!-- Negro -->
+    <color name="colorWithLactose">#F8BBD0</color> <!-- Color para productos con lactosa -->
+    <color name="colorWithGluten">#D7CCC8</color> <!-- Color para productos con gluten -->
+    <color name="colorWithLactosaGluten">#B2EBF2</color> <!-- Color para productos con lactosa y gluten -->
 </resources>
