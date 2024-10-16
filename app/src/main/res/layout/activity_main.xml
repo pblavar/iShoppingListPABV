@@ -35,6 +35,14 @@
             android:shadowDy="4"
             android:shadowRadius="5" />
 
+        <Spinner
+            android:id="@+id/sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="@color/secondary_color" />
+
         <ListView
             android:id="@+id/lvElements"
             android:layout_width="match_parent"

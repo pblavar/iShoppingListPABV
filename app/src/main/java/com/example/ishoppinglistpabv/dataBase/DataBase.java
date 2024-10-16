@@ -2,6 +2,7 @@ package com.example.ishoppinglistpabv.dataBase;
 
 import android.widget.Toast;
 import com.example.ishoppinglistpabv.activities.AddNewProductActivity;
+import com.example.ishoppinglistpabv.adapters.ProductAdapter;
 import com.example.ishoppinglistpabv.models.Product;
 import java.util.ArrayList;
 import java.util.List;
@@ -68,8 +69,31 @@ public class DataBase {
         return productsNotPending;
     }
 
+    public static void filterListView(String category, ProductAdapter adapter) {
+        // Filtramos los productos según la categoría
+        ArrayList<Product> filter;
+        if (category.equals("Todos")) {
+            filter = DataBase.getProductListPending(); // Muestro todos los troductos
+        } else {
+            filter = new ArrayList<>();
+            for (Product product : DataBase.getProductListPending()) {
+                // Filtro según sea con Lactosa o con Gluten
+                if (category.equals("Lactosa") && product.isLactose()) {
+                    filter.add(product);
+                } else if (category.equals("Gluten") && product.isGluten()) {
+                    filter.add(product);
+                }
+            }
+        }
+
+        // Actualizamos la lista de productos en el adaptador
+        adapter.clear();
+        adapter.addAll(filter);// Con esto notificó que los datos del adaptador han cambiado
+    }
+
     /**
      * Método para obtener el último id de la lista
+     *
      * @return - id
      */
     public static int getLastIdByProductList() {
